@@ -29,24 +29,31 @@ export class AppComponent implements OnInit {
   get nome(){
     return this.registerForm.get('nome');
   }
+  
   get telefone(){
     return this.registerForm.get('telefone');
   }
+
   get email() {
     return this.registerForm.get('email');
   }
+
   get idade(){
     return this.registerForm.get('idade');
   }
+  
   get cidade(){
     return this.registerForm.get('cidade');
   }
+  
   get estado(){
     return this.registerForm.get('estado');
   }
+  
   get usuario(){
     return this.registerForm.get('usuario');
   }
+  
   get senha(){
     return this.registerForm.get('senha');
   }
