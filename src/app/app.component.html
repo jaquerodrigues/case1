@@ -5,24 +5,24 @@
     Formulário:
 </h1></div>
 <form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
- 
+  
   <div class="form-group">
-      <div style="width:100%;font-family: Arial;font-size: 18px;">
     <label for="nome">Nome</label>
-    <input type="text" formControl="nome" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nome.errors }" />
+    <input  type="text" name="nome" id="nome" maxlength="100" required autofocus placeholder="Insira seu nome" formControl="nome" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nome.errors }" />
     <div *ngIf="submitted && registerForm.controls.nome.errors" class="invalid-feedback"></div>
-</div>
+    
   </div>
+
 <br>
 <div class="form-group">
   <label for="telefone">Telefone</label>
-  <input type="text" formControl="telefone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefone.errors }" />
+  <input type="text" name="telefone" id="telefone" maxlength="30" formControl="telefone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefone.errors }" />
   <div *ngIf="submitted && registerForm.controls.telefone.errors" class="invalid-feedback"></div>
 </div>
 <br>
 <div class="form-group">
   <label for="email">Email</label>
-  <input type="text" formControl="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+  <input type="email" name="email" id="email"  maxlength="60" required formControl="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
   <div *ngIf="submitted && registerForm.controls.email.errors" class="invalid-feedback"></div>
 </div>
 <br>
@@ -52,12 +52,14 @@
 <br>
 <div class="form-group">
   <label for="senha">Senha</label>
-  <input type="password" formControl="senha" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.senha.errors }" />
+  <input type="password" name="senha" size="10" maxlength="6" formControl="senha" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.senha.errors }" />
   <div *ngIf="submitted && registerForm.controls.senha.errors" class="invalid-feedback"></div>
 </div>
 <br>
 <div class="form-group">
-  <button [disabled]="loading" class="btn btn-primary">Enviar</button>
+  <button [disabled]="loading" class="btn btn-primary">Enviar</button> 
+  <!-- <input type="submit" value="Enviar" id="enviar" name="enviar"> -->
+<!-- <button type="submit" ng-click='onSubmit()'>Enviar</button> --> 
+
 </div>
 </form>
-

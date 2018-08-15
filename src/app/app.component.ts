@@ -9,9 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent implements OnInit {
   title = 'app';
   registerForm: FormGroup;
-  submitted: false;
+  submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
@@ -23,14 +23,14 @@ export class AppComponent implements OnInit {
     cidade: ['', Validators.required],
     estado: ['', Validators.required],
     usuario: ['', Validators.required],
-    senha: ['', [Validators.required, Validators.minLength(6)]]
+    senha: ['', Validators.required]
   });
   }
 
      onSubmit() {
-        //this.submitted = true; //não aceita argh  
+        this.submitted = true;
        // stop here if form is invalid
-         if (this.registerForm.invalid) {
+       if (this.registerForm.invalid) {
              return;
          }
          alert('SUCCESS!! :-)');
