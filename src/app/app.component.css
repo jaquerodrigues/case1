@@ -4,4 +4,10 @@ label {
     width: 90px;
     text-align: right;
     font-family: Arial;font-size: 18px;
+    color:darkgray;
+}
+
+small{
+    font-family: Arial;font-size: 10px;
+    color:black;
 }

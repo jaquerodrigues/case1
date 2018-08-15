@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     cidade: ['', Validators.required],
     estado: ['', Validators.required],
     usuario: ['', Validators.required],
-    senha: ['', Validators.required]
+    senha: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(10)]]
   });
   }
 

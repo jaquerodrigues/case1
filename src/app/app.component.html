@@ -1,14 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:left;font-family: Arial;font-size: 20px;color:crimson ">
-  <title>Case 1 - Jaque</title>
-<h1>
-    Formulário:
-</h1></div>
-<form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
-  
-  <div class="form-group">
-    <label for="nome">Nome</label>
-    <input  type="text" name="nome" id="nome" maxlength="100" required autofocus placeholder="Insira seu nome" formControl="nome" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nome.errors }" />
+ <!-- <input  
+    type="text" 
+    name="nome" 
+    id="nome" 
+    minlength="3" maxlength="100" 
+    required 
+    autofocus placeholder="Insira seu nome" 
+    formControl="nome" 
+    class="form-control" 
+    [ngClass]="{ 'is-invalid': submitted && f.nome.errors }" />
+    
     <div *ngIf="submitted && registerForm.controls.nome.errors" class="invalid-feedback"></div>
     
   </div>
@@ -56,10 +56,89 @@
   <div *ngIf="submitted && registerForm.controls.senha.errors" class="invalid-feedback"></div>
 </div>
 <br>
-<div class="form-group">
-  <button [disabled]="loading" class="btn btn-primary">Enviar</button> 
-  <!-- <input type="submit" value="Enviar" id="enviar" name="enviar"> -->
-<!-- <button type="submit" ng-click='onSubmit()'>Enviar</button> --> 
-
+  <button class="btn btn-primary">Enviar</button> 
+</form>
+-->
+<div style="text-align:left;font-family: Arial;font-size: 18px;color:crimson ">
+<h1>Formulário: </h1>
 </div>
+<form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" class="form-control">
+  </div>
+  
+  <div class="form-group">
+  <label for="telefone">Telefone</label>
+  <input id="telefone" type="text" class="form-control">
+  </div>  
+
+  <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="seu-email-aqui@mail.com" required title="Must be a globex.com email address" class="form-control">
+           
+  </div> 
+
+  <div class="form-group">
+      <label for="idade">Idade</label>
+      <input id="idade" type="number" value="18" class="form-control">
+  </div> 
+
+  <div class="form-group">
+      <label for="cidade">Cidade</label>
+      <input id="cidade" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+      <label for="estado">Estado </label>
+          <select id="Estado" class="form-control">
+            <option selected>Escolha...</option>
+            <option>Acre</option>
+            <option>Alagoas</option>
+            <option>Amapá</option>
+            <option>Amazonas</option>
+            <option>Bahia</option>
+            <option>Ceará</option>
+            <option>Distrito Federal</option>
+            <option>Espírito Santo</option>
+            <option>Goias</option>
+            <option>Maranhão</option>
+            <option>Mato Grosso</option>
+            <option>Mato Grosso do Sul</option>
+            <option>Minas Gerais</option>
+            <option>Pará</option>
+            <option>Paraíba</option>
+            <option>Paraná</option>
+            <option>Pernambuco</option>
+            <option>Piauí</option>
+            <option>Rio de Janeiro</option>
+            <option>Rio Grande do Norte </option>
+            <option>Rio Grande do Sul</option>
+            <option>Rondônia </option>
+            <option>Roraima</option>
+            <option>Santa Catarina</option>
+            <option>São Paulo</option>
+            <option>Sergipe</option>
+            <option>Tocantins</option>
+          </select>
+    </div>
+
+  <div class="form-group">
+      <label for="usuario">Usuário</label>
+      <input id="usuario" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+      <label for="senha">Senha</label>
+      <input id="senha" type="password" minlength="6" maxlength="8" class="form-control" 
+      [ngClass]="{ 'is-invalid': submitted && registerForm.controls.senha.touched}"
+      aria-describedby="passwordHelpBlock">
+      <small id="passwordHelpBlock" class="form-text text-muted" >
+        Entre 6 e 10 caracteres
+      </small>
+      
+     <div *ngIf="submitted && registerForm.invalid" class="invalid-feedback"></div>
+    </div>
+
+<button class="btn-btn-primary">Enviar</button>
 </form>
