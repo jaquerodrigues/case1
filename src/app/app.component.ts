@@ -53,11 +53,13 @@ export class AppComponent implements OnInit {
 
   /*ainda tneho q ver oque vou fazer com onSubmit*/
   onSubmit() {
-        this.submitted = true;
+      //  this.submitted = true;
        // stop here if form is invalid
-       if (this.registerForm.invalid) {
-             return;
-         }
-         alert('SUCCESS!! :-)');
+      // if (this.registerForm.invalid) {
+         //    return;
+         // }
+        // alert('SUCCESS!! :-)');
+        console.log(this.registerForm);
+
   }
 }

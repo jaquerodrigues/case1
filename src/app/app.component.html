@@ -59,28 +59,7 @@
   <button class="btn btn-primary">Enviar</button> 
 </form>
 -->
-<!--<div style="text-align:left;font-family: Arial;font-size: 18px;color:crimson ">
-<h1>Formulário: </h1>
-</div>
-<form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
-  <div class="form-group">
-    <label for="nome">Nome</label>
-    <input id="nome" type="text" class="form-control">
-  </div>
-  
-  <div class="form-group">
-  <label for="telefone">Telefone</label>
-  <input id="telefone" type="text" class="form-control">
-  </div>  
 
-  <div class="form-group">
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="seu-email-aqui@mail.com" required title="Must be a globex.com email address" class="form-control">
-     <span *ngIf="email.invalid && email.touched">
-          Your email does not look right
-      </span>
-  </div> 
--->
 <div style="text-align:left;font-family: Arial;font-size: 18px;color:crimson ">
     <h2>Formulário: </h2>
 </div>
@@ -89,14 +68,14 @@
       <label for="nome">Nome</label><br>
       <input formControlName="nome" autofocus placeholder="Insira seu nome" >
       <span *ngIf="nome.invalid && nome.touched">
-        <small style="color:red">*Nome é obrigatório.</small>
+        <small>*Nome é obrigatório.</small>
       </span>
 
       <br>
       <label for="email">Email</label><br>
       <input formControlName="email" autofocus placeholder="seu-email@mail.com">
       <span *ngIf="email.invalid && email.touched">
-        <small style="color:red">*Email não válido.</small> 
+        <small>*Email não válido.</small> 
       </span>
       <br>
 
@@ -149,7 +128,7 @@
       <label for="usuario">Usuário</label><br>
       <input id="usuario" type="text" class="form-control">
       <span *ngIf="usuario.invalid && usuario.touched">
-        <small style="color:red">*Usuário é obrigatório.</small> 
+        <small>*Usuário é obrigatório.</small> 
       </span>
 <br>
 
@@ -157,7 +136,7 @@
       <label for="senha">Senha</label><br>
       <input id="senha" type="password" minlength="6" maxlength="8" class="form-control">
       <span *ngIf="senha.invalid && senha.touched">
-        <small style="color:red">*Senha deve conter entre 6 a 8 caracteres.</small> 
+        <small>*Senha deve conter entre 6 a 8 caracteres.</small> 
       </span>
       
     <br><br>
