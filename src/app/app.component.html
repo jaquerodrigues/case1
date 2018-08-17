@@ -73,7 +73,7 @@
   <input id="telefone" type="text" class="form-control">
   </div>  
 
-  <!--<div class="form-group">
+  <div class="form-group">
       <label for="email">Email</label>
       <input id="email" type="email" placeholder="seu-email-aqui@mail.com" required title="Must be a globex.com email address" class="form-control">
      <span *ngIf="email.invalid && email.touched">
@@ -82,37 +82,36 @@
   </div> 
 -->
 <div style="text-align:left;font-family: Arial;font-size: 18px;color:crimson ">
-    <h1>Formulário: </h1>
+    <h2>Formulário: </h2>
 </div>
     
-    <form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
-
-        <label for="nome">Nome</label>
+  <form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
+      <label for="nome">Nome</label><br>
       <input formControlName="nome" autofocus placeholder="Insira seu nome" >
       <span *ngIf="nome.invalid && nome.touched">
-          Nome é obrigatório.
+        <small style="color:red">*Nome é obrigatório.</small>
       </span>
-<br>
-<label for="email">Email</label>     
-<input formControlName="email" autofocus placeholder="seu-email@mail.com">
-        <span *ngIf="email.invalid && email.touched">
-          Email não válido
-        </span>
-<br>
 
-      <label for="idade">Idade</label>
-      <input formControlName="idade"  type="number" value="18">
+      <br>
+      <label for="email">Email</label><br>
+      <input formControlName="email" autofocus placeholder="seu-email@mail.com">
+      <span *ngIf="email.invalid && email.touched">
+        <small style="color:red">*Email não válido.</small> 
+      </span>
+      <br>
 
+      <label for="idade">Idade</label><br>
+      <input formControlName="idade"  type="number" placeholder="18">
+      <br>
 
- <br>
-
-  <div class="form-group">
-      <label for="cidade">Cidade</label>
+      <div class="form-group">
+      <label for="cidade">Cidade</label><br>
       <input id="cidade" type="text" class="form-control">
-  </div>
-
-  <div class="form-group">
-      <label for="estado">Estado </label>
+      </div>
+      <br>
+  
+      <div class="form-group">
+      <label for="estado">Estado </label><br>
           <select id="Estado" class="form-control">
             <option selected>Escolha...</option>
             <option>Acre</option>
@@ -144,23 +143,24 @@
             <option>Tocantins</option>
           </select>
     </div>
+<br>
 
-  <div class="form-group">
-      <label for="usuario">Usuário</label>
+
+      <label for="usuario">Usuário</label><br>
       <input id="usuario" type="text" class="form-control">
-  </div>
+      <span *ngIf="usuario.invalid && usuario.touched">
+        <small style="color:red">*Usuário é obrigatório.</small> 
+      </span>
+<br>
 
-  <div class="form-group">
-      <label for="senha">Senha</label>
-      <input id="senha" type="password" minlength="6" maxlength="8" class="form-control" 
-      [ngClass]="{ 'is-invalid': submitted && registerForm.controls.senha.touched}"
-      aria-describedby="passwordHelpBlock">
-      <small id="passwordHelpBlock" class="form-text text-muted" >
-        Entre 6 e 10 caracteres
-      </small>
+
+      <label for="senha">Senha</label><br>
+      <input id="senha" type="password" minlength="6" maxlength="8" class="form-control">
+      <span *ngIf="senha.invalid && senha.touched">
+        <small style="color:red">*Senha deve conter entre 6 a 8 caracteres.</small> 
+      </span>
       
-     <span *ngIf="submitted && registerForm.invalid" class="invalid-feedback"></span>
-    </div>
+    <br><br>
 
 <button class="btn-btn-primary">Enviar</button>
 </form>

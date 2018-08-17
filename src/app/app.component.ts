@@ -26,39 +26,33 @@ export class AppComponent implements OnInit {
       senha: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(10)]]
     });
   }
-  get nome(){
+  get nome() {
     return this.registerForm.get('nome');
   }
-  
-  get telefone(){
+  get telefone() {
     return this.registerForm.get('telefone');
   }
-
   get email() {
     return this.registerForm.get('email');
   }
-
-  get idade(){
+  get idade() {
     return this.registerForm.get('idade');
   }
-  
-  get cidade(){
+  get cidade() {
     return this.registerForm.get('cidade');
   }
-  
-  get estado(){
+  get estado() {
     return this.registerForm.get('estado');
   }
-  
-  get usuario(){
+  get usuario() {
     return this.registerForm.get('usuario');
   }
-  
-  get senha(){
+  get senha() {
     return this.registerForm.get('senha');
   }
 
-     onSubmit() {
+  /*ainda tneho q ver oque vou fazer com onSubmit*/
+  onSubmit() {
         this.submitted = true;
        // stop here if form is invalid
        if (this.registerForm.invalid) {
