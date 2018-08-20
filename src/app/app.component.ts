@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
   title = 'app';
   registerForm: FormGroup;
@@ -53,13 +54,15 @@ export class AppComponent implements OnInit {
 
   /*ainda tneho q ver oque vou fazer com onSubmit*/
   onSubmit() {
-      //  this.submitted = true;
-       // stop here if form is invalid
-      // if (this.registerForm.invalid) {
-         //    return;
-         // }
-        // alert('SUCCESS!! :-)');
-        console.log(this.registerForm);
+       this.submitted = true;
+        // stop here if form is invalid
+       if (this.registerForm.invalid) {
+             return;
+          }
+         alert('SUCCESS!! :-)');
+       // console.log(this.registerForm);
+   }
 
-  }
 }
+
+
