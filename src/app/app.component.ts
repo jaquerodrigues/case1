@@ -54,15 +54,9 @@ export class AppComponent implements OnInit {
 
   /*o plano era fazer uma tabela com os dados recebidos mas né*/
   onSubmit() {
-     //  this.submitted = true;
-        // stop here if form is invalid
-       //if (this.registerForm.invalid) {
-           //  return;
-         // }
-         //alert('SUCCESS!! :-)');
-        console.log(this.registerForm);
-   
-   //    const username = this.nome.value;
+       this.submitted = true;
+    // meus dados recebidos estão no console
+       console.log(this.registerForm);
       }
 
 }

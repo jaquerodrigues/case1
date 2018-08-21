@@ -1,5 +1,5 @@
 <div style="text-align:center;font-family: Arial;font-size: 18px;color:crimson ">
-    <h2>Formulário: </h2>
+    <h2>Formulário </h2>
 </div>
     
   <form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
@@ -20,53 +20,26 @@
           </span>
       <br>
 
+      <label for="idade">Telefone</label><br>
+      <input formControlName="telefone">
+  <br>
+
         <label for="idade">Idade</label><br>
           <input formControlName="idade"  type="number" placeholder="18">
       <br>
 
      
       <label for="cidade">Cidade</label><br>
-      <input id="cidade" type="text" class="form-control">
+      <input formControlName="cidade" >
       <br>
   
-      <!--<div class="form-group"> -->
       <label for="estado">Estado </label><br>
-          <select id="Estado" class="form-control">
-            <option selected>Escolha...</option>
-            <option>Acre</option>
-            <option>Alagoas</option>
-            <option>Amapá</option>
-            <option>Amazonas</option>
-            <option>Bahia</option>
-            <option>Ceará</option>
-            <option>Distrito Federal</option>
-            <option>Espírito Santo</option>
-            <option>Goias</option>
-            <option>Maranhão</option>
-            <option>Mato Grosso</option>
-            <option>Mato Grosso do Sul</option>
-            <option>Minas Gerais</option>
-            <option>Pará</option>
-            <option>Paraíba</option>
-            <option>Paraná</option>
-            <option>Pernambuco</option>
-            <option>Piauí</option>
-            <option>Rio de Janeiro</option>
-            <option>Rio Grande do Norte </option>
-            <option>Rio Grande do Sul</option>
-            <option>Rondônia </option>
-            <option>Roraima</option>
-            <option>Santa Catarina</option>
-            <option>São Paulo</option>
-            <option>Sergipe</option>
-            <option>Tocantins</option>
-          </select>
-    </div>
-<br>
+      <input formControlName="estado" autofocus >  
+      <br>
 
 
       <label for="usuario">Usuário</label><br>
-      <input id="usuario" type="text" class="form-control">
+      <input formControlName="usuario" autofocus>
       <span *ngIf="usuario.invalid && usuario.touched">
         <small>*Usuário é obrigatório.</small> 
       </span>
@@ -74,7 +47,7 @@
 
 
       <label for="senha">Senha</label><br>
-      <input id="senha" type="password" minlength="6" maxlength="8" class="form-control">
+      <input formControlName="senha" type="password" minlength="6" maxlength="8" class="form-control">
       <span *ngIf="senha.invalid && senha.touched">
         <small>*Senha deve conter entre 6 a  8 caracteres.</small> 
       </span>
@@ -82,4 +55,5 @@
     <br><br>
 
 <button class="btn">Enviar</button>
+</div>
 </form>
