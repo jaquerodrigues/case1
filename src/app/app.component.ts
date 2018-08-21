@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
     return this.registerForm.get('senha');
   }
 
-  /*ainda tneho q ver oque vou fazer com onSubmit*/
+  /*o plano era fazer uma tabela com os dados recebidos mas né*/
   onSubmit() {
        this.submitted = true;
         // stop here if form is invalid
