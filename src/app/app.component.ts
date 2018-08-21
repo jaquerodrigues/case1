@@ -57,6 +57,7 @@ export class AppComponent implements OnInit {
        this.submitted = true;
     // meus dados recebidos estão no console
        console.log(this.registerForm);
+       this.ngOnInit();
       }
 
 }
