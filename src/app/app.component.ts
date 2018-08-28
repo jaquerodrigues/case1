@@ -28,11 +28,11 @@ export class AppComponent implements OnInit {
     });
   }
   
-  /*o plano era fazer uma tabela com os dados recebidos mas né*/
-  onSubmit(registerForm.value) {
+  /* o plano era fazer uma tabela com os dados recebidos mas né*/
+  onSubmit( this.registerForm.value ) {
        this.submitted = true;
     // meus dados recebidos estão no console
-       console.log(this.registerForm);
+       console.log(this.registerForm.value);
     // quase um refresh
        this.ngOnInit();
       }
