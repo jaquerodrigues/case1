@@ -27,36 +27,13 @@ export class AppComponent implements OnInit {
       senha: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(10)]]
     });
   }
-  get nome() {
-    return this.registerForm.get('nome');
-  }
-  get telefone() {
-    return this.registerForm.get('telefone');
-  }
-  get email() {
-    return this.registerForm.get('email');
-  }
-  get idade() {
-    return this.registerForm.get('idade');
-  }
-  get cidade() {
-    return this.registerForm.get('cidade');
-  }
-  get estado() {
-    return this.registerForm.get('estado');
-  }
-  get usuario() {
-    return this.registerForm.get('usuario');
-  }
-  get senha() {
-    return this.registerForm.get('senha');
-  }
-
+  
   /*o plano era fazer uma tabela com os dados recebidos mas né*/
-  onSubmit() {
+  onSubmit(registerForm.value) {
        this.submitted = true;
     // meus dados recebidos estão no console
        console.log(this.registerForm);
+    // quase um refresh
        this.ngOnInit();
       }
 

@@ -2,12 +2,12 @@
     <h2>Formulário </h2>
 </div>
     
-  <form [formGroup] = "registerForm" (ngSubmit)= "onSubmit()">
+  <form [formGroup] = "registerForm" (ngSubmit)= "onSubmit(registerForm.value)">
     <div class="container"> 
         
         <label for="nome">Nome</label><br>
           <input formControlName="nome" autofocus placeholder="Insira seu nome" >
-          <span *ngIf="nome.invalid && nome.touched">
+          <span *ngIf="this.form.value.nome.invalid && nome.touched">
             <small>*Nome é obrigatório.</small>
           </span>
         
