@@ -27,9 +27,8 @@ export class AppComponent implements OnInit {
       senha: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(10)]]
     });
   }
-  
   /* o plano era fazer uma tabela com os dados recebidos mas né*/
-  onSubmit( this.registerForm.value ) {
+  onSubmit( registerForm ) {
        this.submitted = true;
     // meus dados recebidos estão no console
        console.log(this.registerForm.value);

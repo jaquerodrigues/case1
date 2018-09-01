@@ -7,7 +7,7 @@
         
         <label for="nome">Nome</label><br>
           <input formControlName="nome" autofocus placeholder="Insira seu nome" >
-          <span *ngIf="this.registerForm.value.nome.invalid && this.registerForm.value.nome.touched">
+          <span *ngIf="this.registerForm.get('nome').invalid && this.registerForm.get('nome').touched">
             <small>*Nome é obrigatório.</small> <!--agora não ta aparecedno mais isso poxa vida --> 
           </span>
         
