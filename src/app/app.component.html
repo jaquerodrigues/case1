@@ -1,60 +1,7 @@
 <div style="text-align:center;font-family: Arial;font-size: 18px;color:crimson ">
     <h2>Formulário </h2>
+
+<app-my-form></app-my-form>
 </div>
-    
-  <form [formGroup] = "registerForm" (ngSubmit)= "onSubmit(registerForm.value)">
-    <div class="container"> 
-        
-        <label for="nome">Nome</label><br>
-          <input formControlName="nome" autofocus placeholder="Insira seu nome" >
-          <span *ngIf="this.registerForm.get('nome').invalid && this.registerForm.get('nome').touched">
-            <small>*Nome é obrigatório.</small> <!--agora não ta aparecedno mais isso poxa vida --> 
-          </span>
-        
-      <br>
-     
-        <label for="email">Email</label><br>
-          <input formControlName="email" autofocus placeholder="seu-email@mail.com">
-          <span *ngIf="this.registerForm.get('email').invalid && this.registerForm.get('email').touched">
-            <small>*Email não válido.</small> 
-          </span>
-      <br>
-
-      <label for="idade">Telefone</label><br>
-      <input formControlName="telefone">
-  <br>
-
-        <label for="idade">Idade</label><br>
-          <input formControlName="idade"  type="number" placeholder="18">
-      <br>
-
-     
-      <label for="cidade">Cidade</label><br>
-      <input formControlName="cidade" >
-      <br>
-  
-      <label for="estado">Estado </label><br>
-      <input formControlName="estado" autofocus >  
-      <br>
 
 
-      <label for="usuario">Usuário</label><br>
-      <input formControlName="usuario" autofocus>
-      <span *ngIf="this.registerForm.get('usuario').invalid && this.registerForm.get('usuario').touched">
-        <small>*Usuário é obrigatório.</small> 
-      </span>
-<br>
-
-
-      <label for="senha">Senha</label><br>
-      <input formControlName="senha" type="password" minlength="6" maxlength="8" class="form-control">
-      <span *ngIf="this.registerForm.get('senha').invalid && this.registerForm.get('senha').touched">
-        <small>*Senha deve conter entre 6 a  8 caracteres.</small> 
-      </span>
-      
-    <br><br>
-
-<button class="btn">Enviar</button>
-<!-- ta imprimindo o form no console a cada result pq ta la no submit-->
-</div>
-</form>
